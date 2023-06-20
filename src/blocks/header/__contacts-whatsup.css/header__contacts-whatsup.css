@@ -9,3 +9,6 @@
   height: 53px;
   cursor: pointer;
 }
+.header__contacts-whatsup:hover {
+  opacity: 0.50;
+}

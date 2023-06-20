@@ -1,6 +1,9 @@
 .header__nav {
   display: flex;
-  justify-content:space-between;
   width: 500px;
   height: 25px;
+  margin-right: 200px;
+  column-gap: 100px;
+  /* text-wrap: nowrap; */
+  flex-wrap: nowrap;
 }

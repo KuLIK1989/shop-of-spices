@@ -1,10 +1,14 @@
 .header__nav-links {
-  width: 595px;
+  width: 100px;
   height: 25px;
-  padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+  list-style-type: none;
+  column-gap: 18px;
+}
+.header__nav-links:hover{
+  opacity: 0.8;
 }
