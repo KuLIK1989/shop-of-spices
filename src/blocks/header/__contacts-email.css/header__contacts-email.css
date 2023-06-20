@@ -1,0 +1,10 @@
+.header__contacts-email {
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  background-image: url(../../../images/вектор-значка-конверта-сообщения-электронной-почты-почтовый-ящик-158449848\ 1.svg);
+  background-repeat: no-repeat;
+  width: 53px;
+  height: 53px;
+}
