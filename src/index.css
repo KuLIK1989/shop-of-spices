@@ -1,5 +1,6 @@
 @import url(./blocks/root/root.css);
 @import url(./blocks/page/page.css);
+
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
 @import url(./blocks/header/__nav-links/header__nav-links.css);
@@ -8,3 +9,6 @@
 @import url(./blocks/header/__contacts-email.css/header__contacts-email.css);
 @import url(./blocks/header/__contacts-vk.css/header__contacts-vk.css);
 @import url(./blocks/header/__contacts-whatsup.css/header__contacts-whatsup.css);
+
+@import url(./blocks/card/card.css);
+@import url(./blocks/cards/cards.css);
