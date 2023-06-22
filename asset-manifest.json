@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/shop-of-spices/static/css/main.9454523a.css",
+    "main.js": "/shop-of-spices/static/js/main.6bae25b0.js",
+    "static/js/787.9b5fdbe1.chunk.js": "/shop-of-spices/static/js/787.9b5fdbe1.chunk.js",
+    "static/media/black 1.svg": "/shop-of-spices/static/media/black 1.62e3341c122f49678c77.svg",
+    "static/media/Vkontakte-Logo-Transparent-Isolated-PNG 1.svg": "/shop-of-spices/static/media/Vkontakte-Logo-Transparent-Isolated-PNG 1.342dc71ea93433ce10d8.svg",
+    "static/media/вектор-значка-конверта-сообщения-электронной-почты-почтовый-ящик-158449848 1.svg": "/shop-of-spices/static/media/вектор-значка-конверта-сообщения-электронной-почты-почтовый-ящик-158449848 1.fa5e57187edb5d48e8a2.svg",
+    "static/media/logo.png": "/shop-of-spices/static/media/logo.73c5a6d49054993a220a.png",
+    "index.html": "/shop-of-spices/index.html",
+    "main.9454523a.css.map": "/shop-of-spices/static/css/main.9454523a.css.map",
+    "main.6bae25b0.js.map": "/shop-of-spices/static/js/main.6bae25b0.js.map",
+    "787.9b5fdbe1.chunk.js.map": "/shop-of-spices/static/js/787.9b5fdbe1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9454523a.css",
+    "static/js/main.6bae25b0.js"
+  ]
+}
