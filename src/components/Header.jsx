@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import logo from "../images/logo.png";
+import logo from "../images/logoNew.png";
 
 function Header() {
   return (
@@ -15,8 +15,7 @@ function Header() {
         <button className="header__contacts-vk" />
         <button className="header__contacts-whatsup" />
         <button className="header__contacts-email" />
-        //!text
-      </div>
+      </div> 
     </div>
   );
 }

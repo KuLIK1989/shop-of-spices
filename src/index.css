@@ -1,3 +1,5 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
 @import url(./blocks/root/root.css);
 @import url(./blocks/page/page.css);
 
@@ -9,6 +11,10 @@
 @import url(./blocks/header/__contacts-email.css/header__contacts-email.css);
 @import url(./blocks/header/__contacts-vk.css/header__contacts-vk.css);
 @import url(./blocks/header/__contacts-whatsup.css/header__contacts-whatsup.css);
+
+@import url(./blocks/main/main.css);
+@import url(./blocks/main/__title/main__title.css);
+@import url(./blocks/main/__text/main__text.css);
 
 @import url(./blocks/card/card.css);
 @import url(./blocks/cards/cards.css);

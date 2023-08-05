@@ -1,0 +1,7 @@
+.main__title {
+  font-family: "Pehlevi", Arial, Helvetica, sans-serif;
+  max-width: max-content;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 60px;
+}
