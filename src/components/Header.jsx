@@ -7,15 +7,15 @@ function Header() {
     <div className="header">
       <img className="header__logo" src={logo} alt="" />
       <ul className="header__nav">
-        <li className="header__nav-links">Контакты</li>
-        <li className="header__nav-links">Акции</li>
-        <li className="header__nav-links">Как нас найти</li>
+        <li className="header__nav-contacs">Контакты</li>
+        <li className="header__nav-promo">Акции</li>
+        <li className="header__nav-map">Как нас найти</li>
       </ul>
       <div className="header__contacts">
         <button className="header__contacts-vk" />
         <button className="header__contacts-whatsup" />
         <button className="header__contacts-email" />
-      </div> 
+      </div>
     </div>
   );
 }
