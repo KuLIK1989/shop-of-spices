@@ -1,14 +1,11 @@
 .card {
   max-width: 282px;
   height: 362px;
+  border: 1px solid black;
   border-radius: 10px;
   background: #ffffff;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.card:hover {
-  opacity: 0.50;
 }

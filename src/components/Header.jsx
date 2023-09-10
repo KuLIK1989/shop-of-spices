@@ -1,15 +1,23 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import React from "react";
+
 import logo from "../images/logoNew.png";
 
-function Header() {
+function Header({ onContacts, onPromo, onMap }) {
   return (
     <div className="header">
       <img className="header__logo" src={logo} alt="" />
       <ul className="header__nav">
-        <li className="header__nav-contacs">Контакты</li>
-        <li className="header__nav-promo">Акции</li>
-        <li className="header__nav-map">Как нас найти</li>
+        <li className="header__nav-contacs" onClick={onContacts}>
+          Контакты
+        </li>
+        <li className="header__nav-promo" onClick={onPromo}>
+          Акции
+        </li>
+        <li className="header__nav-map" onClick={onMap}>
+          Как нас найти
+        </li>
       </ul>
       <div className="header__contacts">
         <button className="header__contacts-vk" />
