@@ -19,6 +19,7 @@
 @import url(./blocks/main/__text/main__text.css);
 
 @import url(./blocks/card/card.css);
+@import url(./blocks/card/__btn/card__btn.css);
 @import url(./blocks/card/__img/card__image.css);
 @import url(./blocks/card/__name/card__name.css);
 
