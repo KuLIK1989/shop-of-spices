@@ -1,6 +1,6 @@
 import PopupWithoutForm from "./PopupWithoutForm";
 
-function PopupWithContacts({ isOpen, onClose, info }) {
+function PopupWithContacts({ isOpen, onClose }) {
   return (
     <PopupWithoutForm
       name="contacts"
