@@ -8,8 +8,8 @@
   cursor: pointer;
   list-style-type: none;
   column-gap: 18px;
+  text-transform:uppercase;
 }
 .header__nav-contacs:hover {
   opacity: 0.5;
-  color: brown;
 }
