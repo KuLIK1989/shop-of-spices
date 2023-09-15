@@ -1,4 +1,4 @@
-function PopupWithoutForm({ name, isOpen, onClose, title, info, pic }) {
+function PopupWithoutForm({ name, isOpen, onClose, title, info}) {
   return (
     <div className={`popup popup_type_${name} ${isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container">
@@ -8,8 +8,8 @@ function PopupWithoutForm({ name, isOpen, onClose, title, info, pic }) {
           className="popup__close-button"
         />
         <h3 className="form__title">{title}</h3>
-        <p className="form__info">{info}</p>
-        {/* <img className="form__icon" src={pic} alt="" />`` */}
+        <div className="form__info">{info}</div>
+        
       </div>
     </div>
   );

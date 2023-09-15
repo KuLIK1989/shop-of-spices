@@ -33,4 +33,9 @@
 @import url(./blocks/form/__info/form__info.css);
 @import url(./blocks/form/__icon/form__icon.css);
 
+@import url(./blocks/contacts/contacts.css);
+
+@import url(./blocks/icon/__mobile/icon__mobile.css);
+@import url(./blocks/icon/__email/icon__email.css);
+
 @import url(./blocks/cards/cards.css);
