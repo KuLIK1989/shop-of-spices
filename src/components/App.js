@@ -6,7 +6,7 @@ import HandleCard from "../utils/HandleCard";
 import PopupWithConatcs from "./PopupWithContacts";
 import PopupWithPromo from "./PopupWithPromo";
 import PopupWithMap from "./PopupWithMap";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 function App() {
   const [isShowContactsPopupOpen, setIsShowContactsPopupOpen] = useState(false);
@@ -30,12 +30,12 @@ function App() {
     setIsShowPromoPopupOpen(false);
     setIsShowMapPopupOpen(false);
   }
-  useEffect(() => {
-    document.body.addEventListener("mousedown", closeAllPopup);
-    return () => {
-      document.body.removeEventListener("mousedown", closeAllPopup);
-    };
-  }, [setIsShowContactsPopupOpen, handleShowPromoClick, handleShowMapClick]);
+  // useEffect(() => {
+  //   document.body.addEventListener("mousedown", closeAllPopup);
+  //   return () => {
+  //     document.body.removeEventListener("mousedown", closeAllPopup);
+  //   };
+  // }, [setIsShowContactsPopupOpen, handleShowPromoClick, handleShowMapClick]);
 
   return (
     <div className="page">

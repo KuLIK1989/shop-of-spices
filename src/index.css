@@ -38,4 +38,6 @@
 @import url(./blocks/icon/__mobile/icon__mobile.css);
 @import url(./blocks/icon/__email/icon__email.css);
 
+@import url(./blocks/map/map.css);
+
 @import url(./blocks/cards/cards.css);
