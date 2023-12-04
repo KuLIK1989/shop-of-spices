@@ -39,5 +39,7 @@
 @import url(./blocks/icon/__email/icon__email.css);
 
 @import url(./blocks/map/map.css);
+@import url(./blocks/map/__link/map__link.css);
+@import url(./blocks/map/__icon/map__icon.css);
 
 @import url(./blocks/cards/cards.css);

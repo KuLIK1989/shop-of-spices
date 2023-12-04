@@ -1,0 +1,7 @@
+.map__link {
+  text-decoration: none;
+  color: inherit;
+}
+.map__link:hover {
+  opacity: 0.5;
+}
