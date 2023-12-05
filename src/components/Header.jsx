@@ -19,8 +19,8 @@ function Header({ onContacts, onPromo, onMap }) {
           Как нас найти
         </li>
       </ul>
-      {/*переделать под корзину*/}
-      <div className="header__contacts">
+      {/*заменить на корзину*/}
+      <div className="header__contacts">{/*заменить название класса хэдэр кнтактс в этом диве*/}
         <button className="header__contacts-vk" />
         <button className="header__contacts-whatsup" />
         <button className="header__contacts-email" />
