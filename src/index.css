@@ -9,10 +9,10 @@
 @import url(./blocks/header/__nav/__nav-contacts/header__nav-contacts.css);
 @import url(./blocks/header/__nav/__nav-map/header__nav-map.css);
 @import url(./blocks/header/__nav/__nav-promo/header__nav-promo.css);
-@import url(./blocks/header/__contacts/header__contacts.css);
-@import url(./blocks/header/__contacts-email.css/header__contacts-email.css);
-@import url(./blocks/header/__contacts-vk.css/header__contacts-vk.css);
-@import url(./blocks/header/__contacts-whatsup.css/header__contacts-whatsup.css);
+@import url(./blocks/header/__cart/header__cart.css);
+@import url(./blocks/header/__cart/__cart-box/header__cart-box.css);
+@import url(./blocks/header/__cart/__cart-image/header__cart-image.css);
+@import url(./blocks/header/__cart/__cart-subtitle/header__cat-subtitle.css);
 
 @import url(./blocks/main/main.css);
 @import url(./blocks/main/__title/main__title.css);

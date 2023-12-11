@@ -2,7 +2,7 @@
   "name": "shop-spices",
   "version": "0.1.0",
   "private": true,
-  "homepage": "f0894605.xsph.ru",
+  "homepage": "http://f0894605.xsph.ru",
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.4",
     "@testing-library/jest-dom": "^5.16.5",
