@@ -1,5 +1,7 @@
 .header__cart-box {
   max-width: 52px;
+  max-height: 52px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
