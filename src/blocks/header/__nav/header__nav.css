@@ -4,6 +4,12 @@
   height: 25px;
   margin-right: 200px;
   column-gap: 100px;
-  /* text-wrap: nowrap; */
   flex-wrap: nowrap;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .header__nav {
+    margin-right: 140px;
+  }
 }

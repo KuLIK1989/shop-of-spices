@@ -3,3 +3,9 @@
   background-color: transparent;
   margin-right: 200px;
 }
+@media (max-width: 1024px) {
+  .header__logo {
+    max-width: 122px;
+    margin-right: 115px;
+  }
+}
