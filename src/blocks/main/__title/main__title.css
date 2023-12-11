@@ -10,3 +10,8 @@
     font-size: 40px;
   }
 }
+@media (max-width: 414px) {
+  .main__title {
+    font-size: 30px;
+  }
+}

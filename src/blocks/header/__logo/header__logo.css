@@ -15,3 +15,8 @@
     margin-right: 90px;
   }
 }
+@media (max-width: 414px) {
+  .header__logo {
+    margin-right: 0;
+  }
+}

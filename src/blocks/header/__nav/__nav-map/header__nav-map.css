@@ -8,8 +8,13 @@
   cursor: pointer;
   list-style-type: none;
   column-gap: 18px;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 .header__nav-map:hover {
   opacity: 0.5;
+}
+@media (max-width: 414px) {
+  .header__nav-map {
+    width: 100px;
+  }
 }
