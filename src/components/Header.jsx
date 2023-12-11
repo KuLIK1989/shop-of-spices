@@ -20,11 +20,9 @@ function Header({ onContacts, onPromo, onMap }) {
           Как нас найти
         </li>
       </ul>
-      <div className="header__cart">
-        <div className="header__cart-box">
-          <img className="header__cart-image" src={cart} alt="Корзина" />
-          <div className="header__cart-subtitile">Корзина</div>
-        </div>
+      <div className="header__cart-box">
+        <img className="header__cart-image" src={cart} alt="Корзина" />
+        <div className="header__cart-subtitile">Корзина</div>
       </div>
     </div>
   );
