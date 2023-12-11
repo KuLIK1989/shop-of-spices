@@ -3,6 +3,7 @@
 import React from "react";
 
 import logo from "../images/logoNew.png";
+import cart from "../images/cart-shopping-svgrepo-com.svg";
 
 function Header({ onContacts, onPromo, onMap }) {
   return (
@@ -19,11 +20,11 @@ function Header({ onContacts, onPromo, onMap }) {
           Как нас найти
         </li>
       </ul>
-      {/*заменить на корзину*/}
-      <div className="header__contacts">{/*заменить название класса хэдэр кнтактс в этом диве*/}
-        <button className="header__contacts-vk" />
-        <button className="header__contacts-whatsup" />
-        <button className="header__contacts-email" />
+      <div className="header__cart">
+        <div className="header__cart-box">
+          <img className="header__cart-image" src={cart} alt="Корзина" />
+          <div className="header__cart-subtitile">Корзина</div>
+        </div>
       </div>
     </div>
   );
