@@ -20,6 +20,7 @@ function Header({ onContacts, onPromo, onMap }) {
           Как нас найти
         </li>
       </ul>
+      {/* //todo переделать под компонент*/}
       <div className="header__cart-box">
         <img className="header__cart-image" src={cart} alt="Корзина" />
         <div className="header__cart-subtitile">Корзина</div>
