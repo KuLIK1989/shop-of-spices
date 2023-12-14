@@ -1,12 +1,10 @@
 .card__btn {
-  border: 2px solid black;
-  border-radius: 4px;
-  background-color: inherit;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
   cursor: pointer;
   width: 91px;
   height: 36px;
-  transition: 0.2s linear;
   font-size: 15px;
-  font-weight: bold;
-  line-height: 160.69%;
+  text-wrap: nowrap;
 }
