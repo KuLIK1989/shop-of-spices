@@ -9,5 +9,6 @@
 @media (max-width: 414px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 10px 66px;
   }
 }

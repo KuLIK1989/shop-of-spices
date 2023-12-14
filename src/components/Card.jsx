@@ -21,11 +21,7 @@ const Card = ({ props }) => {
             onClick={onClickCartMinus}
             className="card__button-minus"
           ></button>
-          <input
-            className="card__input"
-            type="text"
-            value={props.price}
-          />
+          <input className="card__input" type="text" value={props.price} />
           <button
             onClick={onClickCartPlus}
             className="card__button-plus"
