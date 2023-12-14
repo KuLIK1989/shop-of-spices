@@ -1,0 +1,8 @@
+.card__button-minus {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  transition: background 0.2s linear;
+  background-image: url(../../../images/minus-svgrepo-com.svg);
+}

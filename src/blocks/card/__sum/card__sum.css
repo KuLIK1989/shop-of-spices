@@ -1,0 +1,9 @@
+.card__sum {
+  color: #252525;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 100%;
+  margin-left: auto;
+  text-align: right;
+  white-space: nowrap;
+}

@@ -1,0 +1,9 @@
+.card__button-plus {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  transition: background 0.2s linear;
+  background-image: url(../../../images/plus-svgrepo-com.svg);
+  background-size: 30px;
+}
