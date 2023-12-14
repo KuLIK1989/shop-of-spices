@@ -7,7 +7,10 @@ const Card = ({ props }) => {
     setCartSum(cartSum + props.price);
   };
   const onClickCartMinus = () => {
-    setCartSum(cartSum - props.price);
+    if (cartSum === 0) {
+    } else {
+      setCartSum(cartSum - props.price);
+    }
   };
 
   return (
@@ -21,7 +24,11 @@ const Card = ({ props }) => {
             onClick={onClickCartMinus}
             className="card__button-minus"
           ></button>
-          <input className="card__input" type="text" value={props.price} />
+          <input
+            className="card__input"
+            type="text"
+            defaultValue={props.price}
+          />
           <button
             onClick={onClickCartPlus}
             className="card__button-plus"
