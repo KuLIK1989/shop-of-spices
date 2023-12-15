@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-// import cart from "../images/cart-shopping-svgrepo-com.svg";
 
 const Card = ({ props }) => {
-  const [cartSum, setCartSum] = useState(0);
+  const [cartSum, setCartSum] = useState(props.price);
+  const [quantiy, setQuantity] = useState(1);
+
   const onClickCartPlus = () => {
     setCartSum(cartSum + props.price);
+    setQuantity(quantiy + 1);
   };
   const onClickCartMinus = () => {
     if (cartSum === 0) {
     } else {
       setCartSum(cartSum - props.price);
+      setQuantity(quantiy - 1);
     }
   };
 
@@ -24,11 +27,7 @@ const Card = ({ props }) => {
             onClick={onClickCartMinus}
             className="card__button-minus"
           ></button>
-          <input
-            className="card__input"
-            type="text"
-            defaultValue={props.price}
-          />
+          <input className="card__input" type="text" value={quantiy} />
           <button
             onClick={onClickCartPlus}
             className="card__button-plus"
