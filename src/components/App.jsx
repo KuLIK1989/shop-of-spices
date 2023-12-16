@@ -14,6 +14,7 @@ function App() {
   const [isShowPromoPopupOpen, setIsShowPromoPopupOpen] = useState(false);
   // const [isShowMapPopupOpen, setIsShowMapPopupOpen] = useState(false);
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://657c576c853beeefdb993d3c.mockapi.io/items")
@@ -22,15 +23,16 @@ function App() {
       })
       .then((json) => {
         setItems(json);
+        setIsLoading(false);
       });
   }, []);
 
   function HandleCard() {
     return (
       <section className="cards">
-        {items.map((props) => (
-          <Skeleton key={props.id} props={props} />
-        ))}
+        {isLoading
+          ? [...new Array(6)].map((_, index) => <Skeleton key={index} />)
+          : items.map((props) => <Card key={props.id} props={props} />)}
       </section>
     );
   }
