@@ -4,11 +4,15 @@ import React from "react";
 
 import logo from "../images/logoNew.png";
 import cart from "../images/cart-shopping-svgrepo-com.svg";
+import { Link } from "react-router-dom";
 
 function Header({ onContacts, onPromo, onMap }) {
   return (
     <div className="header">
-      <img className="header__logo" src={logo} alt="" />
+      <Link to="/">
+        <img className="header__logo" src={logo} alt="" />
+      </Link>
+
       <ul className="header__nav">
         <li className="header__nav-contacs" onClick={onContacts}>
           Контакты

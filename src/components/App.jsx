@@ -1,41 +1,28 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
+//eslint-disable-next-line
+import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
 // import HandleCard from "../utils/HandleCard";
 import PopupWithConatcs from "./PopupWithContacts";
 import PopupWithPromo from "./PopupWithPromo";
 // import PopupWithMap from "./PopupWithMap";
-import Card from "./Card";
-import Skeleton from "./SkeletonReact";
+// import Card from "./Card";
+// import Skeleton from "./SkeletonReact";
 
 function App() {
   const [isShowContactsPopupOpen, setIsShowContactsPopupOpen] = useState(false);
   const [isShowPromoPopupOpen, setIsShowPromoPopupOpen] = useState(false);
   // const [isShowMapPopupOpen, setIsShowMapPopupOpen] = useState(false);
-  const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    fetch("https://657c576c853beeefdb993d3c.mockapi.io/items")
-      .then((res) => {
-        return res.json();
-      })
-      .then((json) => {
-        setItems(json);
-        setIsLoading(false);
-      });
-  }, []);
+  // function HandleCard() {
+  //   return (
 
-  function HandleCard() {
-    return (
-      <section className="cards">
-        {isLoading
-          ? [...new Array(6)].map((_, index) => <Skeleton key={index} />)
-          : items.map((props) => <Card key={props.id} props={props} />)}
-      </section>
-    );
-  }
+  //   );
+  // }
 
   function handleShowContacsClick() {
     setIsShowContactsPopupOpen(true);
@@ -54,12 +41,6 @@ function App() {
     setIsShowPromoPopupOpen(false);
     // setIsShowMapPopupOpen(false);
   }
-  // useEffect(() => {
-  //   document.body.addEventListener("mousedown", closeAllPopup);
-  //   return () => {
-  //     document.body.removeEventListener("mousedown", closeAllPopup);
-  //   };
-  // }, [setIsShowContactsPopupOpen, handleShowPromoClick, handleShowMapClick]);
 
   return (
     <div className="page">
@@ -69,7 +50,12 @@ function App() {
         onMap={handleShowMapClick}
       />
       <Main />
-      <HandleCard />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+
+      {/* <HandleCard /> */}
       <PopupWithConatcs
         isOpen={isShowContactsPopupOpen}
         onClose={closeAllPopup}
