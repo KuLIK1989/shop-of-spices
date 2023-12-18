@@ -26,7 +26,9 @@ function Header({ onContacts, onPromo, onMap }) {
       </ul>
       {/* //todo переделать под компонент*/}
       <div className="header__cart-box">
-        <img className="header__cart-image" src={cart} alt="Корзина" />
+        <Link to="Cart">
+          <img className="header__cart-image" src={cart} alt="Корзина" />
+        </Link>
         <div className="header__cart-subtitile">Корзина</div>
       </div>
     </div>

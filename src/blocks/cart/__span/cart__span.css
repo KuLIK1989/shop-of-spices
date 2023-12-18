@@ -1,0 +1,9 @@
+.cart__span {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 0 9px;
+  cursor: pointer;
+}
+.cart__span:hover {
+  opacity: 0.4;
+}

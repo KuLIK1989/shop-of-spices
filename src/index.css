@@ -29,6 +29,26 @@
 @import url(./blocks/card/__sum/card__sum.css);
 @import url(./blocks/card/__weight/card__weight.css);
 
+@import url(./blocks/cart/cart.css);
+@import url(./blocks/cart/__bottom/cart__bottom.css);
+@import url(./blocks/cart/__bottom/__bottom-buttons/cart__bottom-buttons.css);
+@import url(./blocks/cart/__bottom/__bottom-details/cart__bottom-details.css);
+@import url(./blocks/cart/__clear/cart__clear.css);
+
+@import url(./blocks/cart/__name/cart__name.css);
+@import url(./blocks/cart/__title/cart__title.css);
+@import url(./blocks/cart/__title/__title-image/cart__title-image.css);
+@import url(./blocks/cart/__top/cart__top.css);
+@import url(./blocks/cart/__span/cart__span.css);
+
+@import url(./blocks/content/__item/content__item.css);
+@import url(./blocks/content/__items/content__items.css);
+@import url(./blocks/content/__cancel-btn/content__cancel-btn.css);
+@import url(./blocks/content/__price/content__price.css);
+@import url(./blocks/content/__quantity/content__quantity.css);
+@import url(./blocks/content/__title/content__title.css);
+@import url(./blocks/content/__image/content__image.css);
+
 @import url(./blocks/popup/popup.css);
 @import url(./blocks/popup/_opened/popup_opened.css);
 @import url(./blocks/popup/__close-button/popup__close-button.css);

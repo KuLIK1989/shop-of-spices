@@ -9,6 +9,7 @@ import NotFound from "../pages/NotFound";
 // import HandleCard from "../utils/HandleCard";
 import PopupWithConatcs from "./PopupWithContacts";
 import PopupWithPromo from "./PopupWithPromo";
+import Cart from "../pages/Cart";
 // import PopupWithMap from "./PopupWithMap";
 // import Card from "./Card";
 // import Skeleton from "./SkeletonReact";
@@ -44,15 +45,21 @@ function App() {
 
   return (
     <div className="page">
-      <Header
-        onContacts={handleShowContacsClick}
-        onPromo={handleShowPromoClick}
-        onMap={handleShowMapClick}
-      />
-      <Main />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={[
+            <Header
+              onContacts={handleShowContacsClick}
+              onPromo={handleShowPromoClick}
+              onMap={handleShowMapClick}
+            />,
+            <Main />,
+            <Home />,
+          ]}
+        />
         <Route path="*" element={<NotFound />} />
+        <Route path="cart" element={<Cart />} />
       </Routes>
 
       {/* <HandleCard /> */}

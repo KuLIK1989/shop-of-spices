@@ -1,6 +1,9 @@
 .header__cart-image {
   max-width: 33px;
 }
+.header__cart-image:hover {
+  opacity: 0.5;
+}
 @media (max-width: 768px) {
   .header__cart-image {
     max-width: 23px;

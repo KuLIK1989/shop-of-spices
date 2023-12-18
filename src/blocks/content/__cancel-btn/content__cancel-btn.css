@@ -1,0 +1,11 @@
+.content__cancel-btn {
+  background-image: url(../../../images/cross-circle-svgrepo-com.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

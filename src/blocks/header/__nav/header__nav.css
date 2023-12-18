@@ -3,7 +3,7 @@
   width: 500px;
   height: 25px;
   margin-right: 200px;
-  column-gap: 100px;
+  column-gap: 75px;
   flex-wrap: nowrap;
   text-align: center;
 }
