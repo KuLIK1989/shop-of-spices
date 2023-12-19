@@ -60,32 +60,79 @@ function Cart() {
         </div>
         <div className="content__items">
           <div className="content__item">
-            <img className="content__image" src={testPic} alt="" />
-            <h4 className="content__title">Паприка</h4>
-            <p className="content__quantity">100г</p>
-            <p className="content__price">150 ₽</p>
-            <button className="content__cancel-btn"></button>
+            <div className="content__left-wrapper">
+              <div class="content__left">
+                <img className="content__pic" src={testPic} alt="" />
+                <div className="content__left-title">
+                  <div class="content__title">паприка</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="content__wrapper-right">
+              <div class="content__price">150₽</div>
+              <div class="content__quantity">
+                <button className="content__quantuty-minus"></button>
+                <input
+                  className="content__quantity-input"
+                  type="text"
+                  defaultValue={1}
+                />
+                <button className="content__quantuty-plus"></button>
+              </div>
+              <div className="content__amount">150₽</div>
+              <div class="content__cancel-btn"></div>
+            </div>
           </div>
           <div className="content__item">
-            <img className="content__image" src={testPic} alt="" />
-            <h4 className="content__title">Паприка</h4>
-            <p className="content__quantity">100г</p>
-            <p className="content__price">150 ₽</p>
-            <button className="content__cancel-btn"></button>
+            <div className="content__left-wrapper">
+              <div class="content__left">
+                <img className="content__pic" src={testPic} alt="" />
+                <div className="content__left-title">
+                  <div class="content__title">паприка</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="content__wrapper-right">
+              <div class="content__price">150₽</div>
+              <div class="content__quantity">
+                <button className="content__quantuty-minus"></button>
+                <input
+                  className="content__quantity-input"
+                  type="text"
+                  defaultValue={1}
+                />
+                <button className="content__quantuty-plus"></button>
+              </div>
+              <div className="content__amount">150₽</div>
+              <div class="content__cancel-btn"></div>
+            </div>
           </div>
           <div className="content__item">
-            <img className="content__image" src={testPic} alt="" />
-            <h4 className="content__title">Паприка</h4>
-            <p className="content__quantity">100г</p>
-            <p className="content__price">150 ₽</p>
-            <button className="content__cancel-btn"></button>
-          </div>
-          <div className="content__item">
-            <img className="content__image" src={testPic} alt="" />
-            <h4 className="content__title">Паприка</h4>
-            <p className="content__quantity">100г</p>
-            <p className="content__price">150 ₽</p>
-            <button className="content__cancel-btn"></button>
+            <div className="content__left-wrapper">
+              <div class="content__left">
+                <img className="content__pic" src={testPic} alt="" />
+                <div className="content__left-title">
+                  <div class="content__title">паприка</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="content__wrapper-right">
+              <div class="content__price">150₽</div>
+              <div class="content__quantity">
+                <button className="content__quantuty-minus"></button>
+                <input
+                  className="content__quantity-input"
+                  type="text"
+                  defaultValue={1}
+                />
+                <button className="content__quantuty-plus"></button>
+              </div>
+              <div className="content__amount">150₽</div>
+              <div class="content__cancel-btn"></div>
+            </div>
           </div>
         </div>
         <div className="cart__bottom">
@@ -95,7 +142,7 @@ function Cart() {
           <div className="cart__bottom-buttons">
             <div className="button pay-btn">
               <span>
-                Сумма заказа: <b>150 ₽</b>
+                Сумма заказа: <b>450₽</b>
               </span>
             </div>
           </div>

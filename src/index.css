@@ -46,8 +46,16 @@
 @import url(./blocks/content/__cancel-btn/content__cancel-btn.css);
 @import url(./blocks/content/__price/content__price.css);
 @import url(./blocks/content/__quantity/content__quantity.css);
+@import url(./blocks/content/__quantity/__quantity-minus/content__quantity-minus.css);
+@import url(./blocks/content/__quantity/__quantity-plus/content__quantity-plus.css);
+@import url(./blocks/content/__quantity/__quantity-input/content__quantity-input.css);
 @import url(./blocks/content/__title/content__title.css);
-@import url(./blocks/content/__image/content__image.css);
+@import url(./blocks/content/__pic/content__pic.css);
+@import url(./blocks/content/__left/content__left.css);
+@import url(./blocks/content/__left/__left-title/content__left-title.css);
+@import url(./blocks/content/__left/__left-wrapper/content__left-wrapper.css);
+@import url(./blocks/content/__wrapper-right/content__wrapper-right.css);
+@import url(./blocks/content/__amount/content__amount.css);
 
 @import url(./blocks/popup/popup.css);
 @import url(./blocks/popup/_opened/popup_opened.css);

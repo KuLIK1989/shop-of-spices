@@ -1,0 +1,4 @@
+.content__quantity {
+  display: flex;
+  max-width: 110px;
+}

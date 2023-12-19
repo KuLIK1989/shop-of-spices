@@ -1,10 +1,11 @@
 .cart__top {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 @media (max-width: 414px) {
   .cart__top {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 }

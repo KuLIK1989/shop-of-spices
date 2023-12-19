@@ -1,0 +1,11 @@
+.content__quantuty-minus {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: #fffafa;
+  cursor: pointer;
+  border-radius: 20px;
+
+  background-image: url(../../../../images/minus-svgrepo-com.svg);
+}

@@ -1,0 +1,5 @@
+.content__wrapper-right {
+  display: flex;
+  max-width: 250px;
+  align-items: center;
+}

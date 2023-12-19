@@ -28,7 +28,7 @@ const Card = ({ props }) => {
             className="card__button-minus"
           ></button>
           {/* //! указать вэлью в инпуте */}
-          <input className="card__input" type="text" />
+          <input className="card__input" type="text" defaultValue={1}/>
           <button
             onClick={onClickCartPlus}
             className="card__button-plus"

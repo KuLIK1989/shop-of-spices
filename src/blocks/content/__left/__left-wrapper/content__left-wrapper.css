@@ -1,0 +1,7 @@
+.content__left-wrapper {
+}
+@media (max-width: 414px) {
+  .content__left-wrapper {
+    max-width: 80px;
+  }
+}
