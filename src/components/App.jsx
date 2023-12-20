@@ -3,27 +3,17 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
-//eslint-disable-next-line
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
-// import HandleCard from "../utils/HandleCard";
 import PopupWithConatcs from "./PopupWithContacts";
 import PopupWithPromo from "./PopupWithPromo";
 import Cart from "../pages/Cart";
 // import PopupWithMap from "./PopupWithMap";
-// import Card from "./Card";
-// import Skeleton from "./SkeletonReact";
 
 function App() {
   const [isShowContactsPopupOpen, setIsShowContactsPopupOpen] = useState(false);
   const [isShowPromoPopupOpen, setIsShowPromoPopupOpen] = useState(false);
   // const [isShowMapPopupOpen, setIsShowMapPopupOpen] = useState(false);
-
-  // function HandleCard() {
-  //   return (
-
-  //   );
-  // }
 
   function handleShowContacsClick() {
     setIsShowContactsPopupOpen(true);
@@ -62,7 +52,6 @@ function App() {
         <Route path="cart" element={<Cart />} />
       </Routes>
 
-      {/* <HandleCard /> */}
       <PopupWithConatcs
         isOpen={isShowContactsPopupOpen}
         onClose={closeAllPopup}
