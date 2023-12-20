@@ -5,7 +5,7 @@ import Skeleton from "../components/SkeletonReact";
 import Card from "../components/Card";
 
 function Home() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,9 +23,11 @@ function Home() {
       <section className="cards">
         {isLoading
           ? [...new Array(6)].map((_, index) => <Skeleton key={index} />)
-          : items.map((props) => <Card key={props.id} props={props} />)}
+          : items.map((obj) => <Card key={obj.id} {...obj}   />)}
+          
       </section>
     </>
   );
+  
 }
 export default Home;
