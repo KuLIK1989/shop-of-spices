@@ -7,8 +7,10 @@ import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 
 function Cart() {
-  
   const items = useSelector((state) => state.cart.items);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  console.log('cart',totalPrice)
+
   return (
     <>
       <div className="header">
@@ -74,7 +76,7 @@ function Cart() {
           <div className="cart__bottom-buttons">
             <div className="button pay-btn">
               <span>
-                Сумма заказа: <b>450₽</b>
+                Сумма заказа: <b>{totalPrice}</b>
               </span>
             </div>
           </div>
