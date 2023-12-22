@@ -2,9 +2,13 @@ import React from "react";
 import cart from "../images/cart-shopping-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 import logo from "../images/logoNew.png";
-import testPic from "../images/tetsCardImage.jpg";
+// import testPic from "../images/tetsCardImage.jpg"; //удалить картинку в файцлах
+import { useSelector } from "react-redux";
+import CartItem from "../components/CartItem";
 
 function Cart() {
+  
+  const items = useSelector((state) => state.cart.items);
   return (
     <>
       <div className="header">
@@ -59,31 +63,9 @@ function Cart() {
           </div>
         </div>
         <div className="content__items">
-          <div className="content__item">
-            <div className="content__left-wrapper">
-              <div className="content__left">
-                <img className="content__pic" src={testPic} alt="" />
-                <div className="content__left-title">
-                  <div className="content__title">паприка</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="content__wrapper-right">
-              <div className="content__price">150₽</div>
-              <div className="content__quantity">
-                <button className="content__quantuty-minus"></button>
-                <input
-                  className="content__quantity-input"
-                  type="text"
-                  defaultValue={1}
-                />
-                <button className="content__quantuty-plus"></button>
-              </div>
-              <div className="content__amount">150₽</div>
-              <div className="content__cancel-btn"></div>
-            </div>
-          </div>
+          {items.map((item) => (
+            <CartItem key={item.id} {...item} />
+          ))}
         </div>
         <div className="cart__bottom">
           <div className="cart__bottom-details">

@@ -1,12 +1,15 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { useSelector } from "react-redux";
 
 import logo from "../images/logoNew.png";
 import cart from "../images/cart-shopping-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 
 function Header({ onContacts, onPromo, onMap }) {
+  const { items, totalPrice } = useSelector((state) => state.cart);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
   return (
     <div className="header">
       <Link to="/">
@@ -30,6 +33,8 @@ function Header({ onContacts, onPromo, onMap }) {
           <img className="header__cart-image" src={cart} alt="Корзина" />
         </Link>
         <div className="header__cart-subtitile">Корзина</div>
+        <span>{totalCount}</span>
+        <span>{totalPrice}</span>
       </div>
     </div>
   );
