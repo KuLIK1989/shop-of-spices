@@ -10,15 +10,12 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem(state, action) {
+      console.log("initialState-AddItem", initialState);
       const findItem = state.items.find((obj) => obj.id === action.payload.id);
       console.log("findItem в добавлении", findItem);
       if (findItem) {
-        findItem.count++;
       } else {
-        state.items.push({
-          ...action.payload,
-          count: 1,
-        });
+        state.items.push(action.payload);
       }
 
       state.totalPrice = state.items.reduce((sum, obj) => {
@@ -27,7 +24,7 @@ export const cartSlice = createSlice({
     },
     minusItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
-      console.log(findItem)
+      console.log(findItem);
       if (findItem.count !== 0) {
         findItem.count--;
       }
@@ -36,10 +33,17 @@ export const cartSlice = createSlice({
       }, 0);
     },
     plusItem(state, action) {
-      const findItem = state.items.find((obj) => obj.id === action.payload);
-      console.log(findItem)
+      console.log("initialState-itemsPlusItem", initialState);
+      const findItem = state.items.find((obj) => obj.id === action.payload.id);
+      console.log("plusItem", findItem);
       if (findItem) {
         findItem.count++;
+        console.log("сработало добавление");
+      } else {
+        state.items.push({
+          ...action.payload,
+          count: 1,
+        });
       }
       state.totalPrice = state.items.reduce((sum, obj) => {
         return obj.price * obj.count + sum;
@@ -55,6 +59,7 @@ export const cartSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addItem, removeItem, clearItem, minusItem,plusItem } = cartSlice.actions;
+export const { addItem, removeItem, clearItem, minusItem, plusItem } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

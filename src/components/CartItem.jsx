@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addItem, minusItem } from "../redux/slices/cartSlice";
+import { addItem, minusItem, removeItem } from "../redux/slices/cartSlice";
 
 const CartItem = ({ id, name, price, link, count }) => {
   const dispatch = useDispatch();
@@ -12,8 +12,11 @@ const CartItem = ({ id, name, price, link, count }) => {
     );
   };
   const clickMinus = () => {
-    console.log('сработал клик минус')
+    console.log("сработал клик минус");
     dispatch(minusItem(id));
+  };
+  const onClickDeleteItem = () => {
+    dispatch(removeItem(id));
   };
   return (
     <div className="content__item">
@@ -27,7 +30,7 @@ const CartItem = ({ id, name, price, link, count }) => {
       </div>
 
       <div className="content__wrapper-right">
-        <div className="content__price">{price * count}₽</div>
+        <div className="content__amount">Итого {price * count}₽</div>
         <div className="content__quantity">
           <button
             className="content__quantuty-minus"
@@ -43,8 +46,8 @@ const CartItem = ({ id, name, price, link, count }) => {
             onClick={clickPlus}
           ></button>
         </div>
-        <div className="content__amount">150₽</div>
-        <div className="content__cancel-btn"></div>
+        <div className="content__price">{price}₽ / 100г</div>
+        <div className="content__cancel-btn" onClick={onClickDeleteItem}></div>
       </div>
     </div>
   );

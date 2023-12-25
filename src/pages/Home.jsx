@@ -8,7 +8,7 @@ import axios from "axios";
 function Home() {
   const [items, setItems] = useState();
   const [isLoading, setIsLoading] = useState(true);
-
+  console.log(items);
   useEffect(() => {
     axios
       .get("https://657c576c853beeefdb993d3c.mockapi.io/items")

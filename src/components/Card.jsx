@@ -1,8 +1,9 @@
-// import React, { useState } from "react";
+import React from "react";
 // import { ueDispatch, useSelector } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../redux/slices/cartSlice";
-// import { plusItem } from "../redux/slices/cartSlice";
+import { plusItem } from "../redux/slices/cartSlice";
+import { minusItem } from "../redux/slices/cartSlice";
 
 const Card = ({ id, price, name, link }) => {
   // const [cartSum, setCartSum] = useState(price);
@@ -11,8 +12,22 @@ const Card = ({ id, price, name, link }) => {
     state.cart.items.find((obj) => obj.id === id)
   );
   const adddedCount = cartItem ? cartItem.count : 0;
-  console.log("adcount", adddedCount);
   const dispatch = useDispatch();
+
+  const onClickPlus = () => {
+    const item = {
+      id,
+      name,
+      link,
+      price,
+      // quantiy,
+    };
+    dispatch(plusItem(item));
+  };
+
+  const onClickMinus = () => {
+    dispatch(minusItem(id));
+  };
 
   const onClickAdd = () => {
     const item = {
@@ -45,7 +60,7 @@ const Card = ({ id, price, name, link }) => {
       <div className="card__buy">
         <div className="card__weight">
           <button
-            // onClick={onClickCartMinus}
+            onClick={onClickMinus}
             className="card__button-minus"
           ></button>
           <input
@@ -54,7 +69,7 @@ const Card = ({ id, price, name, link }) => {
             type="number"
             value={adddedCount}
           />
-          <button className="card__button-plus"></button>
+          <button className="card__button-plus" onClick={onClickPlus}></button>
         </div>
         <button className="card__btn" onClick={onClickAdd}>
           В корзину
