@@ -6,9 +6,9 @@ import Card from "../components/Card";
 import axios from "axios";
 
 function Home() {
-  const [items, setItems] = useState();
+  const [items, setItems] = useState('');
+  console.log('items from home',items);     
   const [isLoading, setIsLoading] = useState(true);
-  console.log(items);
   useEffect(() => {
     axios
       .get("https://657c576c853beeefdb993d3c.mockapi.io/items")
@@ -23,6 +23,7 @@ function Home() {
         {isLoading
           ? [...new Array(6)].map((_, index) => <Skeleton key={index} />)
           : items.map((obj) => <Card key={obj.id} {...obj} />)}
+          
       </section>
     </>
   );

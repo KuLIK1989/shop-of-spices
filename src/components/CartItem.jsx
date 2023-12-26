@@ -1,15 +1,17 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addItem, minusItem, removeItem } from "../redux/slices/cartSlice";
+import { minusItem, plusItem, removeItem } from "../redux/slices/cartSlice";
 
 const CartItem = ({ id, name, price, link, count }) => {
   const dispatch = useDispatch();
   const clickPlus = () => {
-    dispatch(
-      addItem({
-        id,
-      })
-    );
+    const item = {
+      id,
+      name,
+      link,
+      price,
+    };
+    dispatch(plusItem(item));
   };
   const clickMinus = () => {
     console.log("сработал клик минус");

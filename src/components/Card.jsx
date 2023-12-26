@@ -7,9 +7,10 @@ const Card = ({ id, price, name, link }) => {
   const cartItem = useSelector((state) =>
     state.cart.items.find((obj) => obj.id === id)
   );
+  console.log("Card-cartItem", cartItem);
   const adddedCount = cartItem ? cartItem.count : 0;
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const onClickPlus = () => {
     const item = {
       id,
@@ -27,9 +28,6 @@ const Card = ({ id, price, name, link }) => {
   const onClickAdd = () => {
     const item = {
       id,
-      name,
-      link,
-      price,
     };
     dispatch(addItem(item));
   };

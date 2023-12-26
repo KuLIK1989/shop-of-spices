@@ -2,14 +2,12 @@ import React from "react";
 import cart from "../images/cart-shopping-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 import logo from "../images/logoNew.png";
-// import testPic from "../images/tetsCardImage.jpg"; //удалить картинку в файцлах
 import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 
 function Cart() {
   const items = useSelector((state) => state.cart.items);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-  console.log('cart',totalPrice)
 
   return (
     <>
