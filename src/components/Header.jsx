@@ -8,8 +8,8 @@ import cart from "../images/cart-shopping-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 
 function Header({ onContacts, onPromo, onMap }) {
-  const { items, totalPrice } = useSelector((state) => state.cart);
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const { superFinalItems, totalPrice } = useSelector((state) => state.cart);
+  const totalCount = superFinalItems.reduce((sum, item) => sum + item.count, 0);
   return (
     <div className="header">
       <Link to="/">

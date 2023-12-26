@@ -3,6 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   totalPrice: 0,
   items: [],
+  finalItems: [],
+  superFinalItems: [],
 };
 
 export const cartSlice = createSlice({
@@ -17,13 +19,18 @@ export const cartSlice = createSlice({
       // } else {
       //   state.items.push(action.payload);
       // }
-
       // state.totalPrice = state.items.reduce((sum, obj) => {
       //   return obj.price * obj.count + sum;
       // }, 0);
-      const findItem = state.items.find((obj) => obj.id === action.payload.id);
-      console.log(findItem);
-      
+      const findItem = state.finalItems.find(
+        (obj) => obj.id === action.payload.id
+      );
+      if (findItem) {
+        state.superFinalItems = state.finalItems;
+      }
+      state.totalPrice = state.superFinalItems.reduce((sum, obj) => {
+        return obj.price * obj.count + sum;
+      }, 0);
     },
     minusItem(state, action) {
       // const findItem = state.items.find((obj) => obj.id === action.payload);
@@ -36,6 +43,8 @@ export const cartSlice = createSlice({
       // }, 0);
     },
     plusItem(state, action) {
+      //функция не увеличивает количество и стоимость без нажатия кнопки "в корзину" даже если нажимаю кнопку + в корзине
+
       // console.log("initialState-itemsPlusItem", initialState);
       // const findItem = state.items.find((obj) => obj.id === action.payload.id);
       // console.log("plusItem", findItem);
@@ -51,6 +60,17 @@ export const cartSlice = createSlice({
       // state.totalPrice = state.items.reduce((sum, obj) => {
       //   return obj.price * obj.count + sum;
       // }, 0);
+      const findItem = state.items.find((obj) => obj.id === action.payload.id);
+      console.log("plusItem findItem", findItem);
+      if (findItem) {
+        findItem.count++;
+        console.log("PLuseItem увеличение счетчика");
+      } else {
+        state.items.push({ ...action.payload, count: 1 });
+        console.log("PLuseItem else", state.finalItems);
+      }
+      state.finalItems = state.items;
+      console.log("что-то прошло в finalItems", state.finalItems);
     },
     removeItem(state, action) {
       state.items = state.items.filter((obj) => obj.id !== action.payload);

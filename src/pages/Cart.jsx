@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 
 function Cart() {
-  const items = useSelector((state) => state.cart.items);
+  const items = useSelector((state) => state.cart.superFinalItems);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
   return (
