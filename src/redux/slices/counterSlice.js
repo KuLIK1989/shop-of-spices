@@ -1,26 +1,24 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
-}
+  totalPrice: 0,
+  addItems: [],
+  plusItems: [],
+  minusItems: [],
+};
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: "cart",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
+    addItems(state) {
+      state.addItems = state.plusItems;
     },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    },
+    plusItems(state, action) {},
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const {} = counterSlice.actions;
 
-export default counterSlice.reducer
+export default counterSlice.reducer;
