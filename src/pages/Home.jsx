@@ -6,8 +6,7 @@ import Card from "../components/Card";
 import axios from "axios";
 
 function Home() {
-  const [items, setItems] = useState('');
-  console.log('items from home',items);     
+  const [items, setItems] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     axios
@@ -23,7 +22,6 @@ function Home() {
         {isLoading
           ? [...new Array(6)].map((_, index) => <Skeleton key={index} />)
           : items.map((obj) => <Card key={obj.id} {...obj} />)}
-          
       </section>
     </>
   );

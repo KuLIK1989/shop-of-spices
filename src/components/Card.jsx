@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { ueDispatch, useSelector } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, plusItem, minusItem } from "../redux/slices/cartSlice";
@@ -8,7 +8,11 @@ const Card = ({ id, price, name, link }) => {
     state.cart.items.find((obj) => obj.id === id)
   );
   console.log("Card-cartItem", cartItem);
+
+  // const [cardSum, setCardSum] = useState(price);
   const adddedCount = cartItem ? cartItem.count : 0;
+  // function handleCardSum (){
+  // }
 
   const dispatch = useDispatch();
   const onClickPlus = () => {
