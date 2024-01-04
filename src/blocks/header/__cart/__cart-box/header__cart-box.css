@@ -3,7 +3,7 @@
   max-height: 52px;
   margin-top: 15px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 @media (max-width: 414px) {

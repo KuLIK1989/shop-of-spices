@@ -48,7 +48,7 @@ const CartItem = ({ id, name, price, link, count }) => {
             onClick={clickPlus}
           ></button>
         </div>
-        <div className="content__price">{price}₽ / 100г</div>
+        <div className="content__price">{price}₽</div>
         <div className="content__cancel-btn" onClick={onClickDeleteItem}></div>
       </div>
     </div>

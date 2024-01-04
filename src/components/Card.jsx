@@ -7,7 +7,6 @@ const Card = ({ id, price, name, link }) => {
   const cartItem = useSelector((state) =>
     state.cart.items.find((obj) => obj.id === id)
   );
-  console.log("Card-cartItem", cartItem);
 
   // const [cardSum, setCardSum] = useState(price);
   const adddedCount = cartItem ? cartItem.count : 0;
@@ -37,7 +36,7 @@ const Card = ({ id, price, name, link }) => {
   };
 
   return (
-    // передалать по классы по БЭМ
+    //TODO: передалать по классы по БЭМ
     <div className="card">
       <img className="card__image" src={link} alt={name} />
       <h2 className="card__name">{name} 100г</h2>

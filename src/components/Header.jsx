@@ -15,7 +15,6 @@ function Header({ onContacts, onPromo, onMap }) {
       <Link to="/">
         <img className="header__logo" src={logo} alt="" />
       </Link>
-
       <ul className="header__nav">
         <li className="header__nav-contacs" onClick={onContacts}>
           Контакты
@@ -27,14 +26,19 @@ function Header({ onContacts, onPromo, onMap }) {
           Как нас найти
         </li>
       </ul>
-      {/* //todo переделать под компонент*/}
+      {/* //TODO: переделать под компонент */}
       <div className="header__cart-box">
         <Link to="Cart">
           <img className="header__cart-image" src={cart} alt="Корзина" />
         </Link>
-        <div className="header__cart-subtitile">Корзина</div>
-        <span>{totalCount}</span>
-        <span>{totalPrice}</span>
+        {/* <div className="header__cart-subtitile"></div> */}
+        {totalCount > 0 && (
+          <span className="header__cart-count">{totalCount}</span>
+        )}
+        {/* //TODO: спросить у ваграма по поводу варивнта без цены */}
+        {/* {totalPrice > 0 && (
+          <span className="header__cart-price">{totalPrice}₽</span>
+        )} */}
       </div>
     </div>
   );

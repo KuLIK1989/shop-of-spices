@@ -13,6 +13,8 @@
 @import url(./blocks/header/__cart/__cart-box/header__cart-box.css);
 @import url(./blocks/header/__cart/__cart-image/header__cart-image.css);
 @import url(./blocks/header/__cart/__cart-subtitle/header__cat-subtitle.css);
+@import url(./blocks/header/__cart/__cart-count/header__cart-count.css);
+@import url(./blocks/header/__cart/__cart-price/header__cart-price.css);
 
 @import url(./blocks/main/main.css);
 @import url(./blocks/main/__title/main__title.css);
