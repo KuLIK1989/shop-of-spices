@@ -13,6 +13,7 @@ export const cartSlice = createSlice({
     //функция работает на кнопках "+" увеличивая количество и сумму заказа
     plusItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload.id);
+      console.log("plusItem", findItem);
       if (findItem) {
         findItem.count++;
       } else {
@@ -32,13 +33,13 @@ export const cartSlice = createSlice({
         return obj.price * obj.count + sum;
       }, 0);
     },
-    //FIXME: Кнопка должна передавать данные в корзину и карт бокс в хэдере
-    // addItem(state, action) {
-    //   const findItem = state.items.find((obj) => obj.id === action.payload.id);
-    //   if (findItem) {
-    //     state.cartItems = state.items;
-    //   }
-    // },
+    // FIXME: Кнопка должна передавать данные в корзину и карт бокс в хэдере
+    addItem(state, action) {
+      const findItem = state.items.find((obj) => obj.id === action.payload.id);
+      if (findItem) {
+        state.cartItems = state.items;
+      }
+    },
 
     removeItem(state, action) {
       state.items = state.items.filter((obj) => obj.id !== action.payload);

@@ -8,8 +8,10 @@ import cart from "../images/cart-shopping-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 
 function Header({ onContacts, onPromo, onMap }) {
-  const { items, totalPrice } = useSelector((state) => state.cart);
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const { cartItems } = useSelector((state) => state.cart);
+  const totalCount = cartItems.reduce((sum, item) => sum + item.count, 0);
+  // const itemId = cartItems.reduce((sum, item) => sum + item.chislo, 0);
+  console.log("totalCount", totalCount);
   return (
     <div className="header">
       <Link to="/">
@@ -31,14 +33,9 @@ function Header({ onContacts, onPromo, onMap }) {
         <Link to="Cart">
           <img className="header__cart-image" src={cart} alt="Корзина" />
         </Link>
-        {/* <div className="header__cart-subtitile"></div> */}
         {totalCount > 0 && (
           <span className="header__cart-count">{totalCount}</span>
         )}
-        {/* //TODO: спросить у ваграма по поводу варивнта без цены */}
-        {/* {totalPrice > 0 && (
-          <span className="header__cart-price">{totalPrice}₽</span>
-        )} */}
       </div>
     </div>
   );

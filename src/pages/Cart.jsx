@@ -9,7 +9,7 @@ function Cart() {
   // const items = useSelector((state) => state.cart.items);
   // const totalPrice = useSelector((state) => state.cart.totalPrice);
 
-  const { items, totalPrice } = useSelector((state) => state.cart);
+  const { cartItems, totalPrice } = useSelector((state) => state.cart);
   // const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
   return (
@@ -66,7 +66,7 @@ function Cart() {
           </div>
         </div>
         <div className="content__items">
-          {items.map((item) => (
+          {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
         </div>

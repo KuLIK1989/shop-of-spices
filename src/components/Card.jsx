@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-// import { ueDispatch, useSelector } from "@reduxjs/toolkit";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, plusItem, minusItem } from "../redux/slices/cartSlice";
 
 const Card = ({ id, price, name, link }) => {
-  const cartItem = useSelector((state) =>
+  const items = useSelector((state) =>
     state.cart.items.find((obj) => obj.id === id)
   );
-
-  // const [cardSum, setCardSum] = useState(price);
-  const adddedCount = cartItem ? cartItem.count : 0;
-  // function handleCardSum (){
-  // }
+  //Счетчик добавления товара
+  const adddedCount = items ? items.count : 0;
+  //изменение цены в зависимости от количества добавленного товара
+  const addedPrice = price * adddedCount;
+  //Изменяет текст внутри кнопки в заивисимости от боавления или не добавления товара
+  const initialPrice = addedPrice ? "В корзину" : `${price}₽`;
 
   const dispatch = useDispatch();
   const onClickPlus = () => {
@@ -36,7 +36,6 @@ const Card = ({ id, price, name, link }) => {
   };
 
   return (
-    //TODO: передалать по классы по БЭМ
     <div className="card">
       <img className="card__image" src={link} alt={name} />
       <h2 className="card__name">{name} 100г</h2>
@@ -55,9 +54,9 @@ const Card = ({ id, price, name, link }) => {
           <button className="card__button-plus" onClick={onClickPlus}></button>
         </div>
         <button className="card__btn" onClick={onClickAdd}>
-          В корзину
+          {initialPrice}
         </button>
-        <div className="card__sum">{price}₽</div>
+        {addedPrice > 0 && <div className="card__sum">{addedPrice}₽</div>}
       </div>
     </div>
   );
