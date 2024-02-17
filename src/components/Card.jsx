@@ -25,7 +25,11 @@ const Card = ({ id, price, name, link }) => {
   };
 
   const onClickMinus = () => {
-    dispatch(minusItem(id));
+    if (adddedCount > 0) {
+      dispatch(minusItem(id));
+    } else {
+      alert("Вы выбрали минимально допустимое количесвто товара");
+    }
   };
 
   const onClickAdd = () => {

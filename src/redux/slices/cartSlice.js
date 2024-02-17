@@ -13,11 +13,16 @@ export const cartSlice = createSlice({
     //функция работает на кнопках "+" увеличивая количество и сумму заказа
     plusItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload.id);
-      console.log("plusItem", findItem);
+      const findCartItem = state.cartItems.find(
+        (obj) => obj.id === action.payload.id
+      );
       if (findItem) {
         findItem.count++;
       } else {
         state.items.push({ ...action.payload, count: 1 });
+      }
+      if (findCartItem) {
+        findCartItem.count++;
       }
       state.totalPrice = state.items.reduce((sum, obj) => {
         return obj.price * obj.count + sum;
@@ -26,8 +31,17 @@ export const cartSlice = createSlice({
     //функция работает на кнопках "-" уменьшая количество и сумму заказа
     minusItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
-      if (findItem.count !== 0) {
+      const findCartItem = state.cartItems.find(
+        (obj) => obj.id === action.payload
+      );
+      if (findItem.count > 0) {
         findItem.count--;
+      } else {
+        console.error("dont count");
+      }
+      if (findCartItem.count > 0) {
+        findCartItem.count--;
+      } else {
       }
       state.totalPrice = state.items.reduce((sum, obj) => {
         return obj.price * obj.count + sum;
@@ -42,14 +56,18 @@ export const cartSlice = createSlice({
     },
 
     removeItem(state, action) {
-      state.items = state.items.filter((obj) => obj.id !== action.payload);
+      // state.items = state.items.filter((obj) => obj.id !== action.payload);
+      state.cartItems = state.cartItems.filter(
+        (obj) => obj.id !== action.payload
+      );
 
-      state.totalPrice = state.items.reduce((sum, obj) => {
+      state.totalPrice = state.cartItems.reduce((sum, obj) => {
         return obj.price * obj.count + sum;
       }, 0);
     },
     clearItem(state) {
       state.items = [];
+      state.totalPrice = 0;
     },
   },
 });
