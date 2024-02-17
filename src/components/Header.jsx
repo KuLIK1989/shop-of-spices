@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 function Header({ onContacts, onPromo, onMap }) {
   const { cartItems } = useSelector((state) => state.cart);
   const totalCount = cartItems.reduce((sum, item) => sum + item.count, 0);
-  // const itemId = cartItems.reduce((sum, item) => sum + item.chislo, 0);
   console.log("totalCount", totalCount);
   return (
     <div className="header">
@@ -28,7 +27,6 @@ function Header({ onContacts, onPromo, onMap }) {
           Как нас найти
         </li>
       </ul>
-      {/* //TODO: переделать под компонент */}
       <div className="header__cart-box">
         <Link to="Cart">
           <img className="header__cart-image" src={cart} alt="Корзина" />
