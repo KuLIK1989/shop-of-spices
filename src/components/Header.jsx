@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 
 function Header({ onContacts, onPromo, onMap }) {
   const { cartItems } = useSelector((state) => state.cart);
-  const totalCount = cartItems.reduce((sum, item) => sum + item.count, 0);
-  console.log("totalCount", totalCount);
+  const totalItem = Object.keys(cartItems).length;
   return (
     <div className="header">
       <Link to="/">
@@ -31,8 +30,8 @@ function Header({ onContacts, onPromo, onMap }) {
         <Link to="Cart">
           <img className="header__cart-image" src={cart} alt="Корзина" />
         </Link>
-        {totalCount > 0 && (
-          <span className="header__cart-count">{totalCount}</span>
+        {totalItem > 0 && (
+          <span className="header__cart-count">{totalItem}</span>
         )}
       </div>
     </div>
