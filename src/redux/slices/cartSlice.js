@@ -39,9 +39,10 @@ export const cartSlice = createSlice({
       } else {
         console.error("dont count");
       }
-      if (findCartItem.count > 0) {
+      if (findCartItem) {
         findCartItem.count--;
       } else {
+        console.error("error");
       }
       state.totalPrice = state.items.reduce((sum, obj) => {
         return obj.price * obj.count + sum;

@@ -14,8 +14,10 @@ const CartItem = ({ id, name, price, link, count }) => {
     dispatch(plusItem(item));
   };
   const clickMinus = () => {
+    if (count > 0) {
+      dispatch(minusItem(id));
+    }
     console.log("сработал клик минус");
-    dispatch(minusItem(id));
   };
   const onClickDeleteItem = () => {
     dispatch(removeItem(id));
