@@ -6,6 +6,7 @@
   background-color: #fffafa;
   cursor: pointer;
   border-radius: 20px;
+  padding: 0;
 
   background-image: url(../../../../images/minus-svgrepo-com.svg);
 }

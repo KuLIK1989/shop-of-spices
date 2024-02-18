@@ -6,8 +6,11 @@ import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 
 function Cart() {
-  const items = useSelector((state) => state.cart.items);
-  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  // const items = useSelector((state) => state.cart.items);
+  // const totalPrice = useSelector((state) => state.cart.totalPrice);
+
+  const { cartItems, totalPrice } = useSelector((state) => state.cart);
+  // const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
   return (
     <>
@@ -63,7 +66,7 @@ function Cart() {
           </div>
         </div>
         <div className="content__items">
-          {items.map((item) => (
+          {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
         </div>
@@ -74,7 +77,7 @@ function Cart() {
           <div className="cart__bottom-buttons">
             <div className="button pay-btn">
               <span>
-                Сумма заказа: <b>{totalPrice}</b>
+                Сумма заказа: <b>{totalPrice}₽</b>
               </span>
             </div>
           </div>

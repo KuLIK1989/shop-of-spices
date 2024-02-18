@@ -8,14 +8,13 @@ import cart from "../images/cart-shopping-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 
 function Header({ onContacts, onPromo, onMap }) {
-  const { items, totalPrice } = useSelector((state) => state.cart);
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const { cartItems } = useSelector((state) => state.cart);
+  const totalItem = Object.keys(cartItems).length;
   return (
     <div className="header">
       <Link to="/">
         <img className="header__logo" src={logo} alt="" />
       </Link>
-
       <ul className="header__nav">
         <li className="header__nav-contacs" onClick={onContacts}>
           Контакты
@@ -27,14 +26,13 @@ function Header({ onContacts, onPromo, onMap }) {
           Как нас найти
         </li>
       </ul>
-      {/* //todo переделать под компонент*/}
       <div className="header__cart-box">
         <Link to="Cart">
           <img className="header__cart-image" src={cart} alt="Корзина" />
         </Link>
-        <div className="header__cart-subtitile">Корзина</div>
-        <span>{totalCount}</span>
-        <span>{totalPrice}</span>
+        {totalItem > 0 && (
+          <span className="header__cart-count">{totalItem}</span>
+        )}
       </div>
     </div>
   );

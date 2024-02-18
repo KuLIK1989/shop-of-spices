@@ -14,8 +14,10 @@ const CartItem = ({ id, name, price, link, count }) => {
     dispatch(plusItem(item));
   };
   const clickMinus = () => {
+    if (count > 0) {
+      dispatch(minusItem(id));
+    }
     console.log("сработал клик минус");
-    dispatch(minusItem(id));
   };
   const onClickDeleteItem = () => {
     dispatch(removeItem(id));
@@ -42,13 +44,14 @@ const CartItem = ({ id, name, price, link, count }) => {
             className="content__quantity-input"
             type="text"
             value={count}
+            readOnly
           />
           <button
             className="content__quantuty-plus"
             onClick={clickPlus}
           ></button>
         </div>
-        <div className="content__price">{price}₽ / 100г</div>
+        <div className="content__price">{price}₽</div>
         <div className="content__cancel-btn" onClick={onClickDeleteItem}></div>
       </div>
     </div>
