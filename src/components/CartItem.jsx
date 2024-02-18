@@ -42,6 +42,7 @@ const CartItem = ({ id, name, price, link, count }) => {
             className="content__quantity-input"
             type="text"
             value={count}
+            readOnly
           />
           <button
             className="content__quantuty-plus"

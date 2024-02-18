@@ -54,6 +54,7 @@ const Card = ({ id, price, name, link }) => {
             className="card__input"
             type="number"
             value={adddedCount}
+            readOnly
           />
           <button className="card__button-plus" onClick={onClickPlus}></button>
         </div>
