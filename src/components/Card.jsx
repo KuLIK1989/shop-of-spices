@@ -42,7 +42,9 @@ const Card = ({ id, price, name, link }) => {
   return (
     <div className="card">
       <img className="card__image" src={link} alt={name} />
-      <h2 className="card__name">{name} 100г</h2>
+      <h2 className="card__name">
+        {name} <span>100г</span>
+      </h2>
       <div className="card__buy">
         <div className="card__weight">
           <button

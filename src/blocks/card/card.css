@@ -1,11 +1,13 @@
 .card {
   max-width: 282px;
   height: 290px;
-  border: 1px solid black;
-  border-radius: 10px;
-  background: #ffffff;
+  /* border: 1px solid black; */
+  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
+  align-items: center;
+  box-shadow: 4px 4px 6px 2px rgba(61, 64, 76, 0.08);
+  background-color: rgb(252, 252, 252);
 }
