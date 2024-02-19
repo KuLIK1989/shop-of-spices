@@ -52,7 +52,7 @@ export const cartSlice = createSlice({
     addItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload.id);
       if (findItem) {
-        state.cartItems = state.items;
+        state.cartItems.push(findItem);
       }
     },
 

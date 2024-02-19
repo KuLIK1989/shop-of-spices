@@ -33,10 +33,14 @@ const Card = ({ id, price, name, link }) => {
   };
 
   const onClickAdd = () => {
-    const item = {
-      id,
-    };
-    dispatch(addItem(item));
+    if (adddedCount > 0) {
+      const item = {
+        id,
+      };
+      dispatch(addItem(item));
+    } else {
+      alert("Вы не указалаи количество");
+    }
   };
 
   return (
