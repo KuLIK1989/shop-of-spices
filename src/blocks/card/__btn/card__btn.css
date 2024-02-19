@@ -1,6 +1,6 @@
 .card__btn {
-  border-radius: 10px;
-  background-color: black;
+  border-radius: 90px;
+  background: rgb(20, 20, 22);
   color: white;
   cursor: pointer;
   width: 91px;
@@ -8,4 +8,5 @@
   font-size: 13px;
   text-wrap: nowrap;
   margin-left: 3px;
+  font-family: "Nunito";
 }

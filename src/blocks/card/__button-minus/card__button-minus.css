@@ -3,14 +3,16 @@
   display: block;
   width: 36px;
   height: 36px;
-  background-color: silver;
+  background-color: white;
   cursor: pointer;
 
-  background-image: url(../../../images/minus-svgrepo-com.svg);
+  background-image: url(../../../images/iconPlusMinus/button-circle-remove-svgrepo-com.svg);
+  background-size: 35px;
+  border: none;
 }
 .card__button-minus:hover {
-  background-color: darkgrey;
+  opacity: .5;
 }
 .card__button-minus:active {
-  background-color: white;
+  color: chocolate;
 }

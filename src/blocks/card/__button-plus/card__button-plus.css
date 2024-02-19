@@ -3,14 +3,17 @@
   display: block;
   width: 36px;
   height: 36px;
-  transition: background 0.2s linear;
-  background-image: url(../../../images/plus-svgrepo-com.svg);
-  background-size: 30px;
-  background-color: silver;
+  /* transition: background 0.2s linear; */
+  background-image: url(../../../images/iconPlusMinus/button-circle-add-svgrepo-com.svg);
+  background-size: 35px;
+  /* background-color: silver; */
+  background-repeat: no-repeat;
   cursor: pointer;
+  border: none;
+  background-color: white;
 }
 .card__button-plus:hover {
-  background-color: darkgray;
+  /* background-color: darkgray; */
 }
 .card__button-plus:active {
   background-color: white;

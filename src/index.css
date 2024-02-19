@@ -24,6 +24,7 @@
 @import url(./blocks/card/__btn/card__btn.css);
 @import url(./blocks/card/__img/card__image.css);
 @import url(./blocks/card/__name/card__name.css);
+@import url(./blocks/card/__name/__name-span/card__name-span.css);
 @import url(./blocks/card/__button-minus/card__button-minus.css);
 @import url(./blocks/card/__button-plus/card__button-plus.css);
 @import url(./blocks/card/__buy/card__buy.css);
