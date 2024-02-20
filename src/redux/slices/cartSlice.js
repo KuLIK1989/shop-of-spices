@@ -48,20 +48,24 @@ export const cartSlice = createSlice({
         return obj.price * obj.count + sum;
       }, 0);
     },
-    // FIXME: Кнопка должна передавать данные в корзину и карт бокс в хэдере
+    // Функция добавления выбранного товара в корзину
     addItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload.id);
-      if (findItem) {
+
+      // Проверка на Дупликат обьекта. Если лежит такой же обьект - не добавлять в корзину
+      if (!state.cartItems.find((obj) => obj.name === findItem.name)) {
         state.cartItems.push(findItem);
+      } else {
+        console.log("errror");
       }
     },
 
+    // Фунцкия удаления карточки из корзины при нажатии на кнопку удаления
     removeItem(state, action) {
       // state.items = state.items.filter((obj) => obj.id !== action.payload);
       state.cartItems = state.cartItems.filter(
         (obj) => obj.id !== action.payload
       );
-
       state.totalPrice = state.cartItems.reduce((sum, obj) => {
         return obj.price * obj.count + sum;
       }, 0);
