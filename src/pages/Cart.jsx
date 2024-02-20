@@ -2,15 +2,19 @@ import React from "react";
 import cart from "../images/cart-shopping-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 import logo from "../images/logoNew.png";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { clearItem } from "../redux/slices/cartSlice";
 import CartItem from "../components/CartItem";
 
 function Cart() {
   // const items = useSelector((state) => state.cart.items);
   // const totalPrice = useSelector((state) => state.cart.totalPrice);
-
+  const dispatch = useDispatch();
   const { cartItems, totalPrice } = useSelector((state) => state.cart);
   // const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const clearCart = () => {
+    dispatch(clearItem());
+  };
 
   return (
     <>
@@ -62,7 +66,9 @@ function Cart() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="cart__span">Очистить корзину</span>
+            <span onClick={clearCart} className="cart__span">
+              Очистить корзину
+            </span>
           </div>
         </div>
         <div className="content__items">

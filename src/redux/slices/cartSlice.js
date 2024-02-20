@@ -51,7 +51,6 @@ export const cartSlice = createSlice({
     // Функция добавления выбранного товара в корзину
     addItem(state, action) {
       const findItem = state.items.find((obj) => obj.id === action.payload.id);
-
       // Проверка на Дупликат обьекта. Если лежит такой же обьект - не добавлять в корзину
       if (!state.cartItems.find((obj) => obj.name === findItem.name)) {
         state.cartItems.push(findItem);
@@ -72,6 +71,7 @@ export const cartSlice = createSlice({
     },
     clearItem(state) {
       state.items = [];
+      state.cartItems = [];
       state.totalPrice = 0;
     },
   },
