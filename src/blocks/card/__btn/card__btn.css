@@ -7,6 +7,10 @@
   height: 36px;
   font-size: 13px;
   text-wrap: nowrap;
-  margin-left: 3px;
+  margin-left: 13px;
   font-family: "Nunito";
+}
+.card__btn:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s linear;
 }
