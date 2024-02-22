@@ -78,7 +78,7 @@ function Cart() {
         </div>
         <div className="cart__bottom">
           <div className="cart__bottom-details">
-            <span className="cart__span">Купить</span>
+            <span className="cart__span">Оформить заказ</span>
           </div>
           <div className="cart__bottom-buttons">
             <div className="button pay-btn">

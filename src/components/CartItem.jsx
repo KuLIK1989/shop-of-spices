@@ -34,7 +34,7 @@ const CartItem = ({ id, name, price, link, count }) => {
       </div>
 
       <div className="content__wrapper-right">
-        <div className="content__amount">Итого {price * count}₽</div>
+        <div className="content__amount">Итого: {price * count}₽</div>
         <div className="content__quantity">
           <button
             className="content__quantuty-minus"

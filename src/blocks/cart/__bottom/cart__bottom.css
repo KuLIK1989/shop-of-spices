@@ -1,4 +1,5 @@
 .cart__bottom {
+  font-family: "Nunito";
   display: flex;
   justify-content: space-evenly;
   border-top: 1px solid black;
