@@ -15,7 +15,7 @@
     align-items: center;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 619px) {
   .header {
     flex-direction: column;
   }

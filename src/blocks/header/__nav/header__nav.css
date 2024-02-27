@@ -23,11 +23,19 @@
     column-gap: 50px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 619px) {
   .header__nav {
     margin-right: 0;
     font-size: 12px;
     column-gap: 0;
+    max-width: 294px;
+    text-align: right;
+  }
+}
+@media (max-width: 414px) {
+  .header__nav {
+    margin-right: 0;
+    font-size: 12px;
     max-width: 294px;
   }
 }
