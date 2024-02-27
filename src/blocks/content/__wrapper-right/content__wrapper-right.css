@@ -3,3 +3,9 @@
   max-width: 250px;
   align-items: center;
 }
+
+@media (max-width: 415px) {
+  .content__wrapper-right {
+    flex-direction: column-reverse;
+  }
+}

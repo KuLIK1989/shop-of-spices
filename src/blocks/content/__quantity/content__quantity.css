@@ -3,3 +3,8 @@
   max-width: 110px;
   margin-right: 20px;
 }
+@media (max-width: 415px) {
+  .content__quantity {
+    margin: 10px 0 10px 0;
+  }
+}

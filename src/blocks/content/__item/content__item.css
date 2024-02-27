@@ -12,6 +12,6 @@
 @media (max-width: 414px) {
   .content__item {
     min-width: 322px;
-    margin: 0 5px 5px;
+    margin: 0 12px 5px;
   }
 }
